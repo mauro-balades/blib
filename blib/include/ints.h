@@ -23,13 +23,13 @@ typedef signed long long i128;
 
 #endif // BLIB_USE_S_INTS
 
-#ifdef BLIB_TARGET_64
+#ifdef BLIB_TARGET_X64
 typedef signed long long int isize;
 typedef unsigned long long int usize;
 #else
 typedef signed int isize;
 typedef unsigned int usize;
-#endif // BLIB_TARGET_64
+#endif // BLIB_TARGET_X64
 
 #endif // __BLIB_INTS_H__
 
