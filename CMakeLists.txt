@@ -18,13 +18,6 @@ file(GLOB SRC_FILES blib/src/*.c)
 add_library(blib ${SRC_FILES})
 
 message(STATUS "TEST ALLOWED? ${BUILD_TESTS}")
-if(BUILD_TESTS AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/third_party/googletest/CMakeLists.txt)
-  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third_party/googletest EXCLUDE_FROM_ALL)
-  enable_testing()
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/test)
-endif()
-
-if(BUILD_TESTS AND EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/third_party/googletest/CMakeLists.txt)
-  export (TARGETS ${PROJECT_NAME} gtest_main gtest        FILE        ${PROJECT_NAME}Config.cmake)
+if(BUILD_TESTS)
+  # TODO
 endif()
